@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SHAIKSHA s Personal Blog</title>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  header img {
+    height: 300px;
+    border-radius: 50%;
+    margin-right: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+
+  header div {
+  flex: 1;
+  text-align: center;
+  background-color: #f1f9f8; /* <-- New background color */
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  nav {
+    background-color: #80d7da;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  /* Removed position: fixed and bottom: 0 */
+}
+footer a:hover ion-icon {
+  color: #e1306c; /* Instagram pink */
+}
+  nav a.home-link {
+  transition: all 0.3s ease;
+}
+
+nav a.home-link:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #28a745; 
+}
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #0c110dea; /* Text color on hover */
+  background-color: #699ce8; /* Background color on hover */
+}
+section {
+  padding: 40px;
+  background: linear-gradient(to right, #d49bd9, #97d58a);
+  font-size: 16px;
+  line-height: 1.6;
+  border: 1px solid #232420;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(14, 0, 0, 0.1);
+  margin: 20px;
+}
+/* Animation keyframes */
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initial hidden state */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+/* When visible */
+section.visible {
+  animation: slideFadeIn 1s ease forwards;
+}
+footer a:hover ion-icon {
+  color: #e1306c; /* Instagram pink */
+}
+</style>
+</head>
+<script>
+  window.addEventListener('scroll', function () {
+    const section = document.querySelector('section');
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (sectionTop < windowHeight - 50) {
+      section.classList.add('visible');
+    }
+  });
+</script>
+
+<body>
+  <header style="display: flex; align-items: center; background-color: #333; color: white; padding: 40px;">
+    <img src="c:\Users\2090783\Downloads\F6D475BC-6360-4870-8840-6F752D196F32.jpeg" alt="Profile Image" style="height: 300px; border-radius: 50%; margin-right: 40px;">
+    
+    <div style="flex: 1; text-align: center; background-color: #444; padding: 20px; border: 2px solid #fff; border-radius: 10px;">
+      <h1 style="margin: 0;">SHAIK SHAIKSHAVALI</h1>
+      <h3 style="margin: 10px 0 0;">Sr Quality Engineer</h3>
+      <h3 style="margin: 10px 0 0;">Cognizant Technology Solutions</h3>
+      <h3 style="margin: 5px 0 0;">Hyderabad</h3>
+    </div>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#" class="home-link">Home</a></li>
+      <li><a href="#">About me</a></li>
+      <li><a href="#">Resume/CV</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div style="background: linear-gradient(to right, #f4e3c1, #77b3e0); padding: 60px 20px;">
+    <section style="margin: 0 auto; max-width: 1200px; padding: 40px; background-color: #d09e52; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); font-size: 16px; line-height: 1.6;">
+      <h2 style="text-align: center; color: #333;">A Glimpse Into My World</h2>
+      <p>
+        Hello, I'm <strong>Shaikshavali</strong> — Your Friendly Neighborhood Bug Hunter.<br><br>
+  
+        As a passionate <strong>Software Tester at Cognizant</strong>, I specialize in <em>breaking things beautifully</em> so users don’t have to.<br>
+        <strong>My Mission?</strong> To ensure every line of code delivers a seamless experience, every feature works as intended, and every release is a step toward perfection.<br>
+        With a keen eye for detail and a mindset wired for quality, I dive deep into systems to uncover hidden flaws, edge cases, and performance bottlenecks.<br>
+        Whether it's manual testing, automation, or exploratory testing, I believe in <em>testing with empathy</em> — understanding how real users interact with software and making sure it just works.<br><br>
+  
+        <blockquote style="font-style: italic; color: #0b0b0b; border-left: 4px solid #007BFF; padding-left: 10px;">
+          <strong>🛠️ “Great apps aren’t born perfect — they’re forged by testers who chase bugs like legends chasing myths.”</strong>
+        </blockquote><br>
+      </p>
+    </section>
+  </div>  
+     
+  <footer>
+    <p>&copy; 2024 My Website</p>
+    <a href="https://www.instagram.com/shaik_sha_va_li6876?igsh=c2RkYWJuMnRzMG16&utm_source=qr" target="_blank">
+      <ion-icon name="logo-instagram"></ion-icon>
+      <a href="https://www.linkedin.com/in/shaik-shaikshavali-83a2821a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+        <ion-icon name="logo-Linkedin"></ion-icon>
+    </a>
+  </footer>
+  
+</body>
+</html>
